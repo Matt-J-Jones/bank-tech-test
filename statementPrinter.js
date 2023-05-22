@@ -5,7 +5,7 @@ class StatementPrinter {
 
   printStatement(transactions = this.defaultValue) {
     console.log("date || credit || debit || balance");
-    transactions.forEach(line => {
+    transactions.reverse().forEach(line => {
       console.log(`${line.date} || ${line.deposit} || ${line.withdrawal} || ${line.balance}`)
     });
   }
