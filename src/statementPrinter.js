@@ -12,9 +12,3 @@ class StatementPrinter {
 }
 
 module.exports = StatementPrinter;
-
-// Information received from CashMachine in the following format:
-// [ 
-//   { deposit: 100, withdrawal: 0, balance: 100, date: '22-05-2022' },
-//   { deposit: 0, withdrawal: 100, balance: 0, date: '22-05-2022' }
-// ]

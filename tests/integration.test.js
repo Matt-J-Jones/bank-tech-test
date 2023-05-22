@@ -1,5 +1,5 @@
-const StatementPrinter = require('./statementPrinter');
-const CashMachine = require('./cashMachine');
+const StatementPrinter = require('../src/statementPrinter');
+const CashMachine = require('../src/cashMachine');
 const TEST_DATE_1 = new Date(2023, 0, 10).toLocaleDateString('en-UK', {year: 'numeric', month: '2-digit', day: '2-digit'}).replace(/\//g, '-');
 const TEST_DATE_2 = new Date(2023, 0, 13).toLocaleDateString('en-UK', {year: 'numeric', month: '2-digit', day: '2-digit'}).replace(/\//g, '-');
 const TEST_DATE_3 = new Date(2023, 0, 14).toLocaleDateString('en-UK', {year: 'numeric', month: '2-digit', day: '2-digit'}).replace(/\//g, '-');

@@ -1,4 +1,4 @@
-const CashMachine = require('./cashMachine');
+const CashMachine = require('../src/cashMachine');
 const TEST_DATE = new Date(2022, 4, 22).toLocaleDateString('en-UK', {year: 'numeric', month: '2-digit', day: '2-digit'}).replace(/\//g, '-');
 
 

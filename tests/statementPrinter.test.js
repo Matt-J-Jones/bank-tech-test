@@ -1,4 +1,4 @@
-const StatementPrinter = require('./statementPrinter');
+const StatementPrinter = require('../src/statementPrinter');
 let originalLog;
 let mockLog;
 
