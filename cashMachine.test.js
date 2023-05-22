@@ -1,4 +1,6 @@
 const CashMachine = require('./cashMachine');
+const TEST_DATE = new Date(2022, 4, 22).toLocaleDateString('en-UK', {year: 'numeric', month: '2-digit', day: '2-digit'}).replace(/\//g, '-');
+
 
 describe('CashMachine', () => {
   it('Creates new cash machine object', () => {
@@ -61,26 +63,26 @@ describe('CashMachine', () => {
 
   it('Deposits money, shows transaction as hash', () => {
     const cashMachine = new CashMachine();
-    cashMachine.depositMoney(100);
+    cashMachine.depositMoney(100, TEST_DATE);
     expect(cashMachine.showBalance()).toEqual(100);
-    expect(cashMachine.showTransactions()).toEqual([{deposit: 100, balance: 100.0}]);
+    expect(cashMachine.showTransactions()).toEqual([{deposit: 100, balance: 100.0, date: TEST_DATE}]);
   })
 
   it('Deposits money, withdraws money, shows transaction as hash', () => {
     const cashMachine = new CashMachine();
-    cashMachine.depositMoney(100);
+    cashMachine.depositMoney(100, TEST_DATE);
     expect(cashMachine.showBalance()).toEqual(100);
-    cashMachine.withdrawMoney(20);
+    cashMachine.withdrawMoney(20, TEST_DATE);
     expect(cashMachine.showBalance()).toEqual(80);
-    expect(cashMachine.showTransactions()).toEqual([{deposit: 100, balance: 100.0}, {withdrawal: 20, balance: 80.0}]);
+    expect(cashMachine.showTransactions()).toEqual([{deposit: 100, balance: 100.0, date: TEST_DATE}, {withdrawal: 20, balance: 80.0, date: TEST_DATE}]);
   })
 
   it('Deposits money, withdraws money past 0, shows transaction as hash', () => {
     const cashMachine = new CashMachine();
-    cashMachine.depositMoney(50);
+    cashMachine.depositMoney(50, TEST_DATE);
     expect(cashMachine.showBalance()).toEqual(50);
-    cashMachine.withdrawMoney(60);
+    cashMachine.withdrawMoney(60, TEST_DATE);
     expect(cashMachine.showBalance()).toEqual(0);
-    expect(cashMachine.showTransactions()).toEqual([{deposit: 50, balance: 50.0}, {withdrawal: 50, balance: 0.0}]);
+    expect(cashMachine.showTransactions()).toEqual([{deposit: 50, balance: 50.0, date: TEST_DATE}, {withdrawal: 50, balance: 0.0, date: TEST_DATE}]);
   })
 })
