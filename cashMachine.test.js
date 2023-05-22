@@ -65,7 +65,7 @@ describe('CashMachine', () => {
     const cashMachine = new CashMachine();
     cashMachine.depositMoney(100, TEST_DATE);
     expect(cashMachine.showBalance()).toEqual(100);
-    expect(cashMachine.showTransactions()).toEqual([{deposit: 100, balance: 100.0, date: TEST_DATE}]);
+    expect(cashMachine.showTransactions()).toEqual([{deposit: 100, withdrawal: 0, balance: 100.0, date: TEST_DATE}]);
   })
 
   it('Deposits money, withdraws money, shows transaction as hash', () => {
@@ -74,7 +74,7 @@ describe('CashMachine', () => {
     expect(cashMachine.showBalance()).toEqual(100);
     cashMachine.withdrawMoney(20, TEST_DATE);
     expect(cashMachine.showBalance()).toEqual(80);
-    expect(cashMachine.showTransactions()).toEqual([{deposit: 100, balance: 100.0, date: TEST_DATE}, {withdrawal: 20, balance: 80.0, date: TEST_DATE}]);
+    expect(cashMachine.showTransactions()).toEqual([{deposit: 100, withdrawal: 0, balance: 100.0, date: TEST_DATE}, {deposit:0, withdrawal: 20, balance: 80.0, date: TEST_DATE}]);
   })
 
   it('Deposits money, withdraws money past 0, shows transaction as hash', () => {
@@ -83,6 +83,6 @@ describe('CashMachine', () => {
     expect(cashMachine.showBalance()).toEqual(50);
     cashMachine.withdrawMoney(60, TEST_DATE);
     expect(cashMachine.showBalance()).toEqual(0);
-    expect(cashMachine.showTransactions()).toEqual([{deposit: 50, balance: 50.0, date: TEST_DATE}, {withdrawal: 50, balance: 0.0, date: TEST_DATE}]);
+    expect(cashMachine.showTransactions()).toEqual([{deposit: 50, withdrawal: 0, balance: 50.0, date: TEST_DATE}, {deposit: 0, withdrawal: 50, balance: 0.0, date: TEST_DATE}]);
   })
 })
