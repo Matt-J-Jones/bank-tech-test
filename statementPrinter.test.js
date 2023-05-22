@@ -1,9 +1,8 @@
 const StatementPrinter = require('./statementPrinter');
 
 describe('StatementPrinter', () => {
-  it('first test', () => {
-    // printer = new StatementPrinter;
-    // const result
-    // expect(result).toBe('')
+  it('Creates a statement object', () => {
+    const printer = new StatementPrinter();
+    expect(printer).toBeInstanceOf(StatementPrinter);
   })
 })
