@@ -23,19 +23,27 @@ npm run test
 To use the application, follow these steps:
 
 ```terminal
+// to load node workspace
+node
+
+// to load the Bank object
+const Bank = require('./src/integration');
+
 // To create a new bank account
 const bank = new Bank();
 
 // To add & withdraw funds
-
 bank.depositMoney({amount});
 bank.withdrawMoney({amount});
+
 // Alter {amount} to reflect deposit or withdraw amount
 // program accepts both integer and float inputs
 
 // To print a statement of transactions
 bank.printStatement();
 ```
+
+![Bank Tech Test Running](bank-tech-test.png)
 
 ### Logic
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1684763759174" clover="3.2.0">
-  <project timestamp="1684763759174" name="All files">
+<coverage generated="1684764798480" clover="3.2.0">
+  <project timestamp="1684764798480" name="All files">
     <metrics statements="29" coveredstatements="29" conditionals="5" coveredconditionals="5" methods="13" coveredmethods="13" elements="47" coveredelements="47" complexity="0" loc="29" ncloc="29" packages="1" files="3" classes="3"/>
     <file name="cashMachine.js" path="/Users/mattjones/Documents/GitHub/bank-tech-test/src/cashMachine.js">
       <metrics statements="16" coveredstatements="16" conditionals="4" coveredconditionals="4" methods="6" coveredmethods="6"/>
