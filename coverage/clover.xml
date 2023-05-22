@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1684758801062" clover="3.2.0">
+  <project timestamp="1684758801062" name="All files">
+    <metrics statements="21" coveredstatements="21" conditionals="5" coveredconditionals="5" methods="9" coveredmethods="9" elements="35" coveredelements="35" complexity="0" loc="21" ncloc="21" packages="1" files="2" classes="2"/>
+    <file name="cashMachine.js" path="/Users/mattjones/Documents/GitHub/bank-tech-test/src/cashMachine.js">
+      <metrics statements="16" coveredstatements="16" conditionals="4" coveredconditionals="4" methods="6" coveredmethods="6"/>
+      <line num="3" count="14" type="stmt"/>
+      <line num="4" count="14" type="stmt"/>
+      <line num="8" count="13" type="stmt"/>
+      <line num="10" count="13" type="stmt"/>
+      <line num="15" count="13" type="stmt"/>
+      <line num="19" count="13" type="stmt"/>
+      <line num="23" count="5" type="stmt"/>
+      <line num="27" count="14" type="stmt"/>
+      <line num="28" count="14" type="stmt"/>
+      <line num="32" count="8" type="cond" truecount="2" falsecount="0"/>
+      <line num="33" count="6" type="stmt"/>
+      <line num="34" count="6" type="stmt"/>
+      <line num="38" count="2" type="stmt"/>
+      <line num="39" count="2" type="stmt"/>
+      <line num="40" count="2" type="stmt"/>
+      <line num="45" count="2" type="stmt"/>
+    </file>
+    <file name="statementPrinter.js" path="/Users/mattjones/Documents/GitHub/bank-tech-test/src/statementPrinter.js">
+      <metrics statements="5" coveredstatements="5" conditionals="1" coveredconditionals="1" methods="3" coveredmethods="3"/>
+      <line num="3" count="5" type="stmt"/>
+      <line num="7" count="4" type="stmt"/>
+      <line num="8" count="4" type="stmt"/>
+      <line num="9" count="7" type="stmt"/>
+      <line num="14" count="2" type="stmt"/>
+    </file>
+  </project>
+</coverage>
