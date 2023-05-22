@@ -1,37 +1,48 @@
 # Bank tech test
+## Makers Week 9 Individual Challenge
 
-Today, you'll practice doing a tech test.
+The Bank Tech Test is a backend banking application that allows users to deposit and withdraw funds while ensuring they cannot withdraw more than their available balance. Users can also view a statement of their transaction history.
 
-For most tech tests, you'll essentially have unlimited time.  This practice session is about producing the best code you can when there is a minimal time pressure.
+## Installation
 
-You'll get to practice your OO design and TDD skills.
+To install the application, follow these steps:
 
-You'll work alone, and you'll also review your own code so you can practice reflecting on and improving your own work.
-
-## Specification
-
-### Requirements
-
-* You should be able to interact with your code via a REPL like IRB or Node.  (You don't need to implement a command line interface that takes input from STDIN.)
-* Deposits, withdrawal.
-* Account statement (date, amount, balance) printing.
-* Data can be kept in memory (it doesn't need to be stored to a database or anything).
-
-### Acceptance criteria
-
-**Given** a client makes a deposit of 1000 on 10-01-2023  
-**And** a deposit of 2000 on 13-01-2023  
-**And** a withdrawal of 500 on 14-01-2023  
-**When** she prints her bank statement  
-**Then** she would see
-
-```
-date || credit || debit || balance
-14/01/2023 || || 500.00 || 2500.00
-13/01/2023 || 2000.00 || || 3000.00
-10/01/2023 || 1000.00 || || 1000.00
+```terminal
+git clone https://github.com/Matt-J-Jones/bank-tech-test.git
+cd bank-tech-test
+npm install
 ```
 
-## Self-assessment
+To run tests:
+```terminal
+npm run test
+```
 
-Once you have completed the challenge and feel happy with your solution, here's a form to help you reflect on the quality of your code: https://docs.google.com/forms/d/1Q-NnqVObbGLDHxlvbUfeAC7yBCf3eCjTmz6GOqC9Aeo/edit
+### Usage
+
+To use the application, follow these steps:
+
+```terminal
+// To create a new bank account
+const bank = new Bank();
+
+// To add & withdraw funds
+
+bank.depositMoney({amount});
+bank.withdrawMoney({amount});
+// Alter {amount} to reflect deposit or withdraw amount
+// program accepts both integer and float inputs
+
+// To print a statement of transactions
+bank.printStatement();
+```
+
+### Logic
+
+The Bank Tech Test consists of three classes: CashMachine, StatementPrinter, and Bank. Here's an overview of their responsibilities:
+
+* CashMachine: Handles the deposit and withdrawal of funds. Each transaction is stored as a hash object, including the withdrawal/deposit amount, the date (in DD-MM-YYYY format), and the current balance at the time of the transaction. These transaction objects are stored in an array.
+
+* StatementPrinter: Prints the transaction history in reverse order, with a header.
+
+* Bank: An integration object that brings together the CashMachine and StatementPrinter classes. It provides an interface for depositing, withdrawing, and printing statements. It also lays the groundwork for potential future development, such as implementing a frontend.
